@@ -1,7 +1,7 @@
 #ifndef __LinkedList_H_INCLUDED__
 #define __LinkedList_H_INCLUDED__
 
-#include "Node.h"
+#include "Node/Node.h"
 #include <iostream>
 
 class EmployeeList {
