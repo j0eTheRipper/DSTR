@@ -4,17 +4,17 @@
 #include "Node/Node.h"
 #include <iostream>
 
-class EmployeeList {
+class LinkedList {
   public:
-    EmployeeList(std::string name, std::string id, double salary);
-    void insertToStart(Employee *newEmp);
-    void insertToEnd(Employee *newEmp);
+    LinkedList();
+    void insertToStart(Node* newNode);
+    void insertToEnd(Node* newNode);
     void display();
     void reverse();
 
   private:
-    Employee *head;
-    Employee *getLastElement();
+    Node* head;
+    Node* getLastElement();
 };
 
 #endif

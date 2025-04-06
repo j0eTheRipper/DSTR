@@ -3,13 +3,11 @@
 
 #include <string>
 
-struct Employee {
-    std::string EmpName;
-    std::string EmpId;
-    double EmpSalary;
-    Employee *next;
+struct Node {
+    std::string customerID;
+    Node* next;
 
-    Employee(std::string name, std::string id, double salary);
+    Node(std::string);
 };
 
 #endif // !

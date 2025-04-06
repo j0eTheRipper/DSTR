@@ -2,38 +2,38 @@
 #include <iostream>
 using namespace std;
 
-Employee *head;
+Node* head;
 
-EmployeeList::EmployeeList(string name, string id, double salary) {
-    Employee *newEmployee = new Employee(name, id, salary);
+LinkedList::LinkedList(string name, string id, double salary) {
+    Node* newEmployee = new Node(name, id, salary);
     head = newEmployee;
 }
 
-void EmployeeList::insertToStart(Employee *newEmp) {
-    Employee *temp = head->next;
+void LinkedList::insertToStart(Node* newEmp) {
+    Node* temp = head->next;
     head->next = newEmp;
     newEmp->next = temp;
 }
 
-void EmployeeList::insertToEnd(Employee *newEmp) {
-    Employee *lastElement = getLastElement();
+void LinkedList::insertToEnd(Node* newEmp) {
+    Node* lastElement = getLastElement();
     lastElement->next = newEmp;
 }
 
-void EmployeeList::display() {
-    Employee *temp = head;
+void LinkedList::display() {
+    Node* temp = head;
     while (temp) {
-        cout << temp->EmpName << " -> ";
+        cout << temp->data << " -> ";
         temp = temp->next;
     }
 }
 
-void EmployeeList::reverse() {
-    Employee *curr = head;
-    Employee *prev = nullptr;
+void LinkedList::reverse() {
+    Node* curr = head;
+    Node* prev = nullptr;
 
     while (curr) {
-        Employee *next = curr->next;
+        Node* next = curr->next;
         curr->next = prev;
         prev = curr;
         curr = next;
@@ -41,8 +41,8 @@ void EmployeeList::reverse() {
     head = prev;
 }
 
-Employee *EmployeeList::getLastElement() {
-    Employee *temp = head;
+Node* LinkedList::getLastElement() {
+    Node* temp = head;
     while (temp->next) {
         temp = temp->next;
     }

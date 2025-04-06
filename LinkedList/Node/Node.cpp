@@ -1,8 +1,6 @@
 #include "Node.h"
 
-Employee::Employee(std::string name, std::string id, double salary) {
-    this->EmpName = name;
-    this->EmpId = id;
-    this->EmpSalary = salary;
+Node::Node(std::string customerID) {
+    this->customerID = customerID;
     this->next = nullptr;
 }

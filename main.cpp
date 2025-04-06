@@ -1,19 +1,14 @@
 #include "LinkedList/LinkedList.h"
+#include <fstream>
 #include <iostream>
 using namespace std;
 
 int main() {
-    EmployeeList list = EmployeeList("youssef", "EMP123", 1200);
+    ifstream file = ifstream("reviews_cleaned.csv");
+    string row;
+    LinkedList reviews = LinkedList();
 
-    list.display();
-    cout << endl;
-    list.insertToStart(new Employee("jack", "EMP3434", 120));
-    list.display();
-    cout << endl;
-    list.insertToEnd(new Employee("jill", "EMP3434", 120));
-    list.display();
-    cout << endl;
-    list.reverse();
-    list.display();
+    while (getline(file, row)) { // while there is a new line to be read...
+    }
     return 0;
 }
