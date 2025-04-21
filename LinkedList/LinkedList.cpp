@@ -1,39 +1,34 @@
 #include "LinkedList.h"
-#include <iostream>
+#include <cstring>
 using namespace std;
 
-Node* head;
+Transaction* head;
+Transaction* tail;
 
-LinkedList::LinkedList(string name, string id, double salary) {
-    Node* newEmployee = new Node(name, id, salary);
-    head = newEmployee;
+LinkedList::LinkedList(string row) {
+    Transaction* newTransaction = new Transaction(row);
+    head = newTransaction;
+    tail = newTransaction;
 }
 
-void LinkedList::insertToStart(Node* newEmp) {
-    Node* temp = head->next;
-    head->next = newEmp;
-    newEmp->next = temp;
+void LinkedList::insertToStart(Transaction* newTransaction) {
+    Transaction* temp = head->next;
+    head->next = newTransaction;
+    newTransaction->next = temp;
 }
 
-void LinkedList::insertToEnd(Node* newEmp) {
-    Node* lastElement = getLastElement();
-    lastElement->next = newEmp;
-}
-
-void LinkedList::display() {
-    Node* temp = head;
-    while (temp) {
-        cout << temp->data << " -> ";
-        temp = temp->next;
-    }
+void LinkedList::insertToEnd(Transaction* newTransaction) {
+    Transaction* lastElement = getLastElement();
+    lastElement->next = newTransaction;
+    tail = newTransaction;
 }
 
 void LinkedList::reverse() {
-    Node* curr = head;
-    Node* prev = nullptr;
+    Transaction* curr = head;
+    Transaction* prev = nullptr;
 
     while (curr) {
-        Node* next = curr->next;
+        Transaction* next = curr->next;
         curr->next = prev;
         prev = curr;
         curr = next;
@@ -41,8 +36,8 @@ void LinkedList::reverse() {
     head = prev;
 }
 
-Node* LinkedList::getLastElement() {
-    Node* temp = head;
+Transaction* LinkedList::getLastElement() {
+    Transaction* temp = head;
     while (temp->next) {
         temp = temp->next;
     }

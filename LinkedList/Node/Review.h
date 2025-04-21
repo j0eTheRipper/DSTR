@@ -2,7 +2,7 @@
 #define __REVIEW_H_INCLUDED__
 #include "Node.h"
 
-struct Review : Node {
+struct Review {
     std::string productID, review;
     int rating;
 

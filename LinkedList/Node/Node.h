@@ -4,10 +4,15 @@
 #include <string>
 
 struct Node {
-    std::string customerID;
+    std::string Artist;
+    std::string Song;
+    std::string Genre;
+    double Length;
+    int Release;
     Node* next;
+    Node* prev;
 
-    Node(std::string);
+    Node(std::string, std::string, std::string, double, int);
 };
 
 #endif // !

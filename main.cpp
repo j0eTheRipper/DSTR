@@ -1,14 +1,26 @@
-#include "LinkedList/LinkedList.h"
+#include "LinkedList/Node/Transaction.h"
 #include <fstream>
 #include <iostream>
 using namespace std;
 
 int main() {
-    ifstream file = ifstream("reviews_cleaned.csv");
     string row;
-    LinkedList reviews = LinkedList();
+    ifstream file("file.csv");
 
-    while (getline(file, row)) { // while there is a new line to be read...
-    }
+    getline(file, row, '\n');
+    getline(file, row, '\n');
+    Transaction transaction(row);
+    getline(file, row, '\n');
+    Transaction transaction2(row);
+
+    bool a = transaction < transaction2;
+
+    cout << a << endl;
+
+    cout << transaction2.price << endl;
+
+    cout << endl;
+    file.close();
+
     return 0;
 }

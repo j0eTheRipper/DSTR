@@ -1,9 +1,7 @@
 #include "Review.h"
-#include "Node.h"
 
 Review::Review(std::string productID, std::string customerID,
-               std::string review, int rating)
-    : Node(customerID) {
+               std::string review, int rating) {
     this->productID = productID;
     this->review = review;
     this->rating = rating;
