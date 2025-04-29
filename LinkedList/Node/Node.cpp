@@ -1,13 +1,8 @@
 #include "Node.h"
-using namespace std;
+#include "Transaction.h"
 
-Node::Node(string Artist, string Song, string Genre, double length,
-           int Released) {
-    this->Song = Song;
-    this->Artist = Artist;
-    this->Release = Released;
-    this->Genre = Genre;
-    this->Length = length;
+Node::Node(Transaction* transaction) {
+    this->transaction = *transaction;
 
     this->next = nullptr;
     this->prev = nullptr;

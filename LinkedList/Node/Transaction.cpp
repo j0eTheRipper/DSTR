@@ -18,10 +18,9 @@ Transaction::Transaction(string row) {
     this->date.tm_mday = stoi(date.substr(6, date.length()));
 
     this->payment = values[5];
-
-    this->next = nullptr;
-    this->prev = nullptr;
 }
+
+Transaction::Transaction() {}
 
 bool Transaction::operator<(Transaction transaction) {
     // true if this (ie left operand) has happened before transaction (ie right

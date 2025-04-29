@@ -1,18 +1,14 @@
 #ifndef __NODE_H_INCLUDED__
 #define __NODE_H_INCLUDED__
 
-#include <string>
+#include "Transaction.h"
 
 struct Node {
-    std::string Artist;
-    std::string Song;
-    std::string Genre;
-    double Length;
-    int Release;
+    Transaction transaction;
     Node* next;
     Node* prev;
 
-    Node(std::string, std::string, std::string, double, int);
+    Node(Transaction*);
 };
 
-#endif // !
+#endif

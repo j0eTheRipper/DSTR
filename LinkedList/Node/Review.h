@@ -1,12 +1,17 @@
 #ifndef __REVIEW_H_INCLUDED__
 #define __REVIEW_H_INCLUDED__
-#include "Node.h"
+
+#include <string>
 
 struct Review {
-    std::string productID, review;
+    std::string productID, review, customerID;
     int rating;
 
-    Review(std::string, std::string, std::string, int);
+    Review(std::string row);
+    Review();
+
+  private:
+    void getRowValues(std::string, std::string*);
 };
 
 #endif

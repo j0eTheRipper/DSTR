@@ -2,33 +2,33 @@
 #include <cstring>
 using namespace std;
 
-Transaction* head;
-Transaction* tail;
+Node* head;
+Node* tail;
 
-LinkedList::LinkedList(string row) {
-    Transaction* newTransaction = new Transaction(row);
-    head = newTransaction;
-    tail = newTransaction;
+LinkedList::LinkedList(Transaction* transaction) {
+    Node* newNode = new Node(transaction);
+    head = newNode;
+    tail = newNode;
 }
 
-void LinkedList::insertToStart(Transaction* newTransaction) {
-    Transaction* temp = head->next;
-    head->next = newTransaction;
-    newTransaction->next = temp;
+void LinkedList::insertToStart(Node* newNode) {
+    Node* temp = head->next;
+    head->next = newNode;
+    newNode->next = temp;
 }
 
-void LinkedList::insertToEnd(Transaction* newTransaction) {
-    Transaction* lastElement = getLastElement();
-    lastElement->next = newTransaction;
-    tail = newTransaction;
+void LinkedList::insertToEnd(Node* newNode) {
+    Node* lastElement = getLastElement();
+    lastElement->next = newNode;
+    tail = newNode;
 }
 
 void LinkedList::reverse() {
-    Transaction* curr = head;
-    Transaction* prev = nullptr;
+    Node* curr = head;
+    Node* prev = nullptr;
 
     while (curr) {
-        Transaction* next = curr->next;
+        Node* next = curr->next;
         curr->next = prev;
         prev = curr;
         curr = next;
@@ -36,8 +36,8 @@ void LinkedList::reverse() {
     head = prev;
 }
 
-Transaction* LinkedList::getLastElement() {
-    Transaction* temp = head;
+Node* LinkedList::getLastElement() {
+    Node* temp = head;
     while (temp->next) {
         temp = temp->next;
     }
