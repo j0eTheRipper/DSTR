@@ -3,12 +3,12 @@
 
 #include "Transaction.h"
 
-struct Node {
-    Transaction* transaction;
+template <class T> struct Node {
+    T* value;
     Node* next;
     Node* prev;
 
-    Node(Transaction*);
+    Node(T*);
 };
 
 #endif

@@ -1,8 +1,8 @@
 #include "Node.h"
-#include "Transaction.h"
+template struct Node<Transaction>;
 
-Node::Node(Transaction* transaction) {
-    this->transaction = transaction;
+template <class T> Node<T>::Node(T* value) {
+    this->value = value;
 
     this->next = nullptr;
     this->prev = nullptr;

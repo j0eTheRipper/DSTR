@@ -5,19 +5,19 @@
 #include "Node/Transaction.h"
 #include <iostream>
 
-class LinkedList {
+template <class T> class LinkedList {
   public:
-    LinkedList(Node* node);
+    LinkedList(Node<T>* node);
     LinkedList();
-    void insertToEnd(Node* newNode);
-    void insertToStart(Node* newNode);
-    void addFirstnode(Node* node);
+    void insertToEnd(Node<T>* newNode);
+    void insertToStart(Node<T>* newNode);
+    void addFirstnode(Node<T>* node);
     void reverse();
 
   private:
-    Node* head;
-    Node* tail;
-    Node* getLastElement();
+    Node<T>* head;
+    Node<T>* tail;
+    Node<T>* getLastElement();
 };
 
 #endif

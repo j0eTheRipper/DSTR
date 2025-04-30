@@ -15,12 +15,15 @@ int main() {
     // read the first line to insert the first node
     getline(transactionsFile, transactionRow, '\n');
     Transaction* transaction = new Transaction(transactionRow);
-    Node* headNode = new Node(transaction);
+
+    Node<Transaction>* headNode = new Node(transaction);
+    cout << headNode->value->customerID;
+
     LinkedList transactions(headNode);
 
     while (getline(transactionsFile, transactionRow, '\n')) {
         Transaction* transaction = new Transaction(transactionRow);
-        Node* node = new Node(transaction);
+        Node<Transaction>* node = new Node(transaction);
         transactions.insertToStart(node);
     }
 
