@@ -7,13 +7,16 @@
 
 class LinkedList {
   public:
-    LinkedList(Transaction* transaction);
+    LinkedList(Node* node);
+    LinkedList();
     void insertToEnd(Node* newNode);
     void insertToStart(Node* newNode);
+    void addFirstnode(Node* node);
     void reverse();
 
   private:
     Node* head;
+    Node* tail;
     Node* getLastElement();
 };
 

@@ -2,14 +2,12 @@
 #include <cstring>
 using namespace std;
 
-Node* head;
-Node* tail;
-
-LinkedList::LinkedList(Transaction* transaction) {
-    Node* newNode = new Node(transaction);
-    head = newNode;
-    tail = newNode;
+LinkedList::LinkedList(Node* node) {
+    head = node;
+    tail = node;
 }
+
+LinkedList::LinkedList() {}
 
 void LinkedList::insertToStart(Node* newNode) {
     Node* temp = head->next;

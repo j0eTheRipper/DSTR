@@ -15,7 +15,7 @@ Review::Review() {}
 
 void Review::getRowValues(string row, string* values) {
     int i = 0;
-    while (row.find(",") != -1) {
+    while (row.find(",") != -1 && i < 3) {
         values[i] = row.substr(0, row.find(","));
         row.replace(0, row.find(",") + 1, "");
         i++;

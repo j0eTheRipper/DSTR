@@ -1,3 +1,4 @@
+#include "LinkedList/LinkedList.h"
 #include "LinkedList/Node/Node.h"
 #include "LinkedList/Node/Transaction.h"
 #include <fstream>
@@ -5,22 +6,26 @@
 using namespace std;
 
 int main() {
-    string transaction, review;
-    ifstream reviews("reviews.csv");
-    ifstream transactions("transactions.csv");
+    string transactionRow;
+    ifstream transactionsFile("transactions.csv");
 
-    // read the first 2 lines (headers)
-    getline(reviews, review, '\n');
-    getline(transactions, transaction, '\n');
+    // read the first line of the file: the csv header
+    getline(transactionsFile, transactionRow, '\n');
 
-    while (getline(transactions, transaction, '\n')) {
-        Transaction* t = new Transaction(transaction);
-        cout << Node(t).transaction.customerID << endl;
+    // read the first line to insert the first node
+    getline(transactionsFile, transactionRow, '\n');
+    Transaction* transaction = new Transaction(transactionRow);
+    Node* headNode = new Node(transaction);
+    LinkedList transactions(headNode);
+
+    while (getline(transactionsFile, transactionRow, '\n')) {
+        Transaction* transaction = new Transaction(transactionRow);
+        Node* node = new Node(transaction);
+        transactions.insertToStart(node);
     }
 
     cout << endl;
-    reviews.close();
-    transactions.close();
+    transactionsFile.close();
 
     return 0;
 }

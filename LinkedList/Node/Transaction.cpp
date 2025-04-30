@@ -56,7 +56,7 @@ bool Transaction::operator>(Transaction transaction) {
     return true;
 }
 
-void Transaction::getRowValues(string row, string* values) {
+void Transaction::getRowValues(string row, string values[]) {
     int i = 0;
     while (row.find(",") != -1) {
         values[i] = row.substr(0, row.find(","));

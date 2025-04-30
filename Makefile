@@ -1,5 +1,5 @@
-build/main: build/LinkedList.o build/Transaction.o build/Node.o main.cpp
-	g++ build/LinkedList.o build/Transaction.o build/Node.o main.cpp -o build/main
+build/main: build/LinkedList.o build/Transaction.o build/Node.o build/Review.o main.cpp
+	g++ build/LinkedList.o build/Transaction.o build/Node.o build/Review.o main.cpp -o build/main
 	./build/main
 
 build/LinkedList.o: LinkedList/LinkedList.cpp
@@ -10,3 +10,6 @@ build/Node.o: LinkedList/Node/Node.cpp
 
 build/Transaction.o: LinkedList/Node/Transaction.cpp
 	g++ -c LinkedList/Node/Transaction.cpp -o build/Transaction.o
+
+build/Review.o: LinkedList/Node/Review.cpp
+	g++ -c LinkedList/Node/Review.cpp -o build/Review.o

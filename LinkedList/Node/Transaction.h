@@ -17,7 +17,7 @@ struct Transaction {
     bool operator>(Transaction);
 
   private:
-    void getRowValues(std::string, std::string*);
+    void getRowValues(std::string, std::string[]);
 };
 
 #endif

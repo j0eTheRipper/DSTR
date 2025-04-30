@@ -4,7 +4,7 @@
 #include "Transaction.h"
 
 struct Node {
-    Transaction transaction;
+    Transaction* transaction;
     Node* next;
     Node* prev;
 
