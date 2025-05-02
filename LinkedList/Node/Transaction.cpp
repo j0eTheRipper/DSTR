@@ -55,6 +55,12 @@ bool Transaction::operator>(Transaction transaction) {
     }
     return true;
 }
+std::ostream& operator<<(std::ostream& out, Transaction transaction) {
+    out << transaction.customerID << " bought " << transaction.product << " on "
+        << transaction.date.tm_mday << "/" << transaction.date.tm_mon << "/"
+        << transaction.date.tm_year;
+    return out;
+}
 
 void Transaction::getRowValues(string row, string values[]) {
     int i = 0;

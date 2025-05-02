@@ -3,6 +3,7 @@
 
 #include "Review.h"
 #include <ctime>
+#include <ostream>
 #include <string>
 
 struct Transaction {
@@ -15,6 +16,8 @@ struct Transaction {
 
     bool operator<(Transaction);
     bool operator>(Transaction);
+
+    friend std::ostream& operator<<(std::ostream& out, Transaction transaction);
 
   private:
     void getRowValues(std::string, std::string[]);

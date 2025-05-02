@@ -17,15 +17,24 @@ int main() {
     Transaction* transaction = new Transaction(transactionRow);
 
     Node<Transaction>* headNode = new Node(transaction);
-    cout << headNode->value->customerID;
 
     LinkedList transactions(headNode);
 
     while (getline(transactionsFile, transactionRow, '\n')) {
         Transaction* transaction = new Transaction(transactionRow);
         Node<Transaction>* node = new Node(transaction);
-        transactions.insertToStart(node);
+        transactions.insertToEnd(node);
     }
+    cout << "Before Swap" << endl;
+    Node<Transaction> a = transactions[2];
+    Node<Transaction> b = transactions[3];
+    cout << *a.value << endl;
+    cout << *b.value << endl;
+
+    cout << "Swapping" << endl;
+    transactions.swap(a, b);
+    cout << *a.value << endl;
+    cout << *b.value << endl;
 
     cout << endl;
     transactionsFile.close();

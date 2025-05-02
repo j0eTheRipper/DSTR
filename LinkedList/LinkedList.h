@@ -12,9 +12,13 @@ template <class T> class LinkedList {
     void insertToEnd(Node<T>* newNode);
     void insertToStart(Node<T>* newNode);
     void addFirstnode(Node<T>* node);
+    void swap(Node<T>& a, Node<T>& b);
     void reverse();
+    int size();
+    Node<T> operator[](int const i);
 
   private:
+    int length;
     Node<T>* head;
     Node<T>* tail;
     Node<T>* getLastElement();

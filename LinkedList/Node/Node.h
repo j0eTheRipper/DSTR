@@ -9,6 +9,7 @@ template <class T> struct Node {
     Node* prev;
 
     Node(T*);
+    Node();
 };
 
 #endif
