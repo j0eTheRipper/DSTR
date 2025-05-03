@@ -15,7 +15,7 @@ Transaction::Transaction(string row) {
     // date dstr
     this->date.tm_mday = stoi(date.substr(0, date.find("/")));
     this->date.tm_mon = stoi(date.substr(3, date.find("/")));
-    this->date.tm_mday = stoi(date.substr(6, date.length()));
+    this->date.tm_year = stoi(date.substr(6, date.length()));
 
     this->payment = values[5];
 }

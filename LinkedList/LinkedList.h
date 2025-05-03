@@ -15,7 +15,9 @@ template <class T> class LinkedList {
     void swap(Node<T>& a, Node<T>& b);
     void reverse();
     int size();
-    Node<T> operator[](int const i);
+    Node<T>& operator[](int const i);
+    void bubbleSort();
+    void MergeSort();
 
   private:
     int length;

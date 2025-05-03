@@ -23,19 +23,14 @@ int main() {
     while (getline(transactionsFile, transactionRow, '\n')) {
         Transaction* transaction = new Transaction(transactionRow);
         Node<Transaction>* node = new Node(transaction);
-        transactions.insertToEnd(node);
+        transactions.insertToStart(node);
     }
-    cout << "Before Swap" << endl;
-    Node<Transaction> a = transactions[2];
-    Node<Transaction> b = transactions[3];
-    cout << *a.value << endl;
-    cout << *b.value << endl;
 
-    cout << "Swapping" << endl;
-    transactions.swap(a, b);
-    cout << *a.value << endl;
-    cout << *b.value << endl;
+    transactions.bubbleSort();
 
+    for (int i = 0; i < transactions.size() + 1; i++) {
+        cout << *transactions[i].value << endl;
+    }
     cout << endl;
     transactionsFile.close();
 
