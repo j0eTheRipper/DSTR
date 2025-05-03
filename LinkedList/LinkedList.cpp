@@ -17,23 +17,23 @@ template <typename T> void LinkedList<T>::insertToStart(Node<T>* newNode) {
     head = newNode;
     head->next = temp;
     temp->prev = head;
-    this->length++;
+    this->length += 1;
 }
 
 template <typename T> void LinkedList<T>::insertToEnd(Node<T>* newNode) {
     tail->next = newNode;
     newNode->prev = tail;
     tail = newNode;
-    this->length++;
+    this->length += 1;
 }
 
 template <typename T> int LinkedList<T>::size() { return this->length; }
 
 template <typename T> Node<T>& LinkedList<T>::operator[](int const i) {
     Node<T>* curr;
-    if (i > length / 2) {
+    if (i > (length / 2)) {
         curr = tail;
-        int counter = length;
+        int counter = length - 1;
         while (counter > i) {
             curr = curr->prev;
             counter--;
@@ -77,12 +77,13 @@ template <typename T> Node<T>* LinkedList<T>::getLastElement() {
 }
 
 template <typename T> void LinkedList<T>::bubbleSort() {
-    for (int i = 0; i < length - 1; i++) {
-        Node<T>& a = (*this)[i];
-        for (int j = i + 1; j < length; j++) {
-            Node<T>& b = (*this)[j];
-            if (*a.value < *b.value) {
-                this->swap(a, b);
+    for (int i = 0; i < length; i++) {
+        Node<T>* a = &(*this)[i];
+        Node<T>* b = a;
+        for (int j = 0; j < length - (1 + i); j++) {
+            b = b->next;
+            if (*a->value < *b->value) {
+                this->swap(*a, *b);
             }
         }
     }
