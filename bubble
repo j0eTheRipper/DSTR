@@ -1,3 +1,0 @@
-g++ -c LinkedList/LinkedList.cpp -o build/LinkedList.o
-g++ build/LinkedList.o build/Transaction.o build/Node.o build/Review.o main.cpp -o build/main
-./build/main

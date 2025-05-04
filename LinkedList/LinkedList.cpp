@@ -1,6 +1,5 @@
 #include "LinkedList.h"
 #include "Node/Node.h"
-#include <cstddef>
 
 using namespace std;
 template class LinkedList<Transaction>;
@@ -128,7 +127,7 @@ LinkedList<T> LinkedList<T>::merge(LinkedList<T>& left, LinkedList<T>& right) {
     Node<T>* rightPtr = right.head;
 
     while (leftPtr && rightPtr) {
-        if (*(leftPtr->value) < *(rightPtr->value)) {
+        if (*(leftPtr->value) > *(rightPtr->value)) {
             result.insertToEnd(new Node<T>(new T(*(leftPtr->value))));
             leftPtr = leftPtr->next;
         } else {
