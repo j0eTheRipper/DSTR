@@ -16,6 +16,7 @@ template <class T> class Array {
     T& operator[](int const i);
     int findByDate(const T& target);
     int find(bool (*filter)(T& a));
+    int find(T& a);
     int len();
     Array<T> mergeSort();
 

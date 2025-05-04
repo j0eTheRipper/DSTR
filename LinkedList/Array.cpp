@@ -1,5 +1,8 @@
 #include "Array.h"
+#include "Node/wordFreq.h"
 template class Array<Transaction>;
+template class Array<Review>;
+template class Array<WordFreq>;
 
 template <typename T> Array<T>::Array(T& item) {
     array = new T[1];
@@ -123,7 +126,6 @@ template <typename T> int Array<T>::findByDate(const T& target) {
 }
 
 template <typename T> int Array<T>::find(bool (*filter)(T& a)) {
-    T fallback = T();
     int count = 0;
     for (int i = 0; i < length; i++) {
         T b = array[i];

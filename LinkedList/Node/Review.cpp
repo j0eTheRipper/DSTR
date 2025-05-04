@@ -22,3 +22,6 @@ void Review::getRowValues(string row, string* values) {
     }
     values[i] = row;
 }
+bool Review::operator>(Review review) { return this->rating > review.rating; }
+bool Review::operator<(Review review) { return this->rating > review.rating; }
+bool Review::operator==(Review review) { return this->rating == review.rating; }

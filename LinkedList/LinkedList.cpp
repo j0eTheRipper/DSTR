@@ -1,8 +1,11 @@
 #include "LinkedList.h"
 #include "Node/Node.h"
+#include "Node/wordFreq.h"
 
 using namespace std;
 template class LinkedList<Transaction>;
+template class LinkedList<Review>;
+template class LinkedList<WordFreq>;
 
 template <typename T> LinkedList<T>::LinkedList(Node<T>* node) {
     length = 1;
@@ -155,9 +158,9 @@ template <typename T> int LinkedList<T>::findByDate(const T& target) {
     while (left <= right) {
         int mid = left + (right - left) / 2;
 
-        if ((*this)[mid] == target) {
+        if (*(*this)[mid].value == target) {
             return mid;
-        } else if ((*this)[mid] > target) {
+        } else if (*(*this)[mid].value > target) {
             left = mid + 1;
         } else {
             right = mid - 1;
