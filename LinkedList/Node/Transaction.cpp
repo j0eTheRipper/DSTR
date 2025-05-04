@@ -56,10 +56,20 @@ bool Transaction::operator>(Transaction transaction) {
     return true;
 }
 std::ostream& operator<<(std::ostream& out, Transaction transaction) {
-    out << transaction.customerID << " bought " << transaction.product << " on "
+    out << transaction.customerID << "," << transaction.product << ","
+        << transaction.category << "," << transaction.price << ","
         << transaction.date.tm_mday << "/" << transaction.date.tm_mon << "/"
-        << transaction.date.tm_year;
+        << transaction.date.tm_year << "," << transaction.payment;
     return out;
+}
+
+bool Transaction::operator==(Transaction transaction) {
+    if (this->date.tm_mday == transaction.date.tm_mday &&
+        this->date.tm_mon == transaction.date.tm_mon &&
+        this->date.tm_year == transaction.date.tm_year) {
+        return true;
+    }
+    return false;
 }
 
 void Transaction::getRowValues(string row, string values[]) {

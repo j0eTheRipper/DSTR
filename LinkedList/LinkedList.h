@@ -18,6 +18,8 @@ template <class T> class LinkedList {
     Node<T>& operator[](int const i);
     void bubbleSort();
     LinkedList<T> mergeSort();
+    int findByDate(const T& target);
+    int find(bool (*filter)(T& a));
 
   private:
     int length;

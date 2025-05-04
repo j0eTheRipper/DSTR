@@ -9,6 +9,9 @@ struct Review {
 
     Review(std::string row);
     Review();
+    bool operator>(Review review);
+    bool operator<(Review review);
+    bool operator==(Review review);
 
   private:
     void getRowValues(std::string, std::string*);

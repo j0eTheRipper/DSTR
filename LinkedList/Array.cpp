@@ -19,6 +19,7 @@ template <typename T> void Array<T>::expand() {
     for (int i = 0; i < size; i++) {
         newArr[i] = array[i];
     }
+    delete[] array;
     array = newArr;
     size = size * 2;
 }
@@ -100,4 +101,35 @@ Array<T> Array<T>::merge(Array<T>& left, Array<T>& right) {
         leftCounter++;
     }
     return result;
+}
+
+template <typename T> int Array<T>::findByDate(const T& target) {
+    int left = 0;
+    int right = length - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (array[mid] == target) {
+            return mid;
+        } else if (array[mid] > target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1; // Not found
+}
+
+template <typename T> int Array<T>::find(bool (*filter)(T& a)) {
+    T fallback = T();
+    int count = 0;
+    for (int i = 0; i < length; i++) {
+        T b = array[i];
+        if (filter(b)) {
+            count++;
+        }
+    }
+    return count;
 }

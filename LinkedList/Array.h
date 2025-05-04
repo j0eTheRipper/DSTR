@@ -3,6 +3,7 @@
 
 #include "Node/Transaction.h"
 #include <iostream>
+#include <string>
 
 template <class T> class Array {
   public:
@@ -13,6 +14,8 @@ template <class T> class Array {
     void swap(T& a, T& b);
     void bubbleSort();
     T& operator[](int const i);
+    int findByDate(const T& target);
+    int find(bool (*filter)(T& a));
     int len();
     Array<T> mergeSort();
 
