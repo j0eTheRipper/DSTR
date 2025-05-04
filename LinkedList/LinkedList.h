@@ -17,13 +17,13 @@ template <class T> class LinkedList {
     int size();
     Node<T>& operator[](int const i);
     void bubbleSort();
-    void MergeSort();
+    LinkedList<T>* mergeSort(LinkedList<T>*);
 
   private:
     int length;
     Node<T>* head;
     Node<T>* tail;
-    Node<T>* getLastElement();
+    LinkedList<T>& merge(LinkedList<T>&, LinkedList<T>&);
 };
 
 #endif

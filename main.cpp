@@ -1,7 +1,6 @@
 #include "LinkedList/LinkedList.h"
 #include "LinkedList/Node/Node.h"
 #include "LinkedList/Node/Transaction.h"
-#include <chrono>
 #include <fstream>
 #include <iostream>
 using namespace std;
@@ -27,15 +26,7 @@ int main() {
         transactions.insertToEnd(node);
     }
 
-    auto start = chrono::high_resolution_clock().now();
-    transactions.bubbleSort();
-    auto stop = chrono::high_resolution_clock().now();
-
-    for (int i = 0; i < transactions.size(); i++) {
-        cout << *transactions[i].value << endl;
-    }
-    auto duration = chrono::duration_cast<chrono::milliseconds>(stop - start);
-    cout << "finished execution in " << duration.count() << " milliseconds";
+    transactions.mergeSort(&transactions);
 
     cout << endl;
     transactionsFile.close();
