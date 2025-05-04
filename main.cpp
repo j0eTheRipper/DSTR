@@ -26,7 +26,11 @@ int main() {
         transactions.insertToEnd(node);
     }
 
-    transactions.mergeSort(&transactions);
+    transactions = transactions.mergeSort();
+
+    for (int i = 0; i < transactions.size(); i++) {
+        cout << *transactions[i].value << endl;
+    }
 
     cout << endl;
     transactionsFile.close();

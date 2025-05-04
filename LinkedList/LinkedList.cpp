@@ -26,6 +26,10 @@ template <typename T> void LinkedList<T>::insertToStart(Node<T>* newNode) {
 }
 
 template <typename T> void LinkedList<T>::insertToEnd(Node<T>* newNode) {
+    if (length == 0 || head == nullptr || tail == nullptr) {
+        addFirstnode(newNode);
+        return;
+    }
     tail->next = newNode;
     newNode->prev = tail;
     tail = newNode;
@@ -93,81 +97,54 @@ template <typename T> void LinkedList<T>::bubbleSort() {
     }
 }
 
-template <typename T>
-LinkedList<T>* LinkedList<T>::mergeSort(LinkedList<T>* linkedList) {
-    if (linkedList->size() == 1) {
-        return linkedList;
-    } // base condition
-
-    int leftLength = linkedList->size() / 2;
-    int rightLength = leftLength;
-    if (linkedList->length % 2 != 0)
-        rightLength = leftLength + 1; // to account for non-even arrays
-
-    LinkedList<T>* left = new LinkedList<T>(&(*linkedList)[0]);
-    LinkedList<T>* right = new LinkedList<T>(&(*linkedList)[rightLength]);
-
-    Node<T>* a = linkedList->head;
-    while (left->size() < leftLength) {
-        a = a->next;
-        Node<T>* copyOfNode = new Node(a->value);
-        left->insertToEnd(copyOfNode);
-    }
-    while (right->size() < rightLength) {
-        a = a->next;
-        Node<T>* copyOfNode = new Node(a->value);
-        right->insertToEnd(copyOfNode);
+template <typename T> LinkedList<T> LinkedList<T>::mergeSort() {
+    if (length <= 1) {
+        return *this;
     }
 
-    left = mergeSort(left);
-    right = mergeSort(right);
+    int mid = length / 2;
+    LinkedList<T> left, right;
 
-    for (int i = 0; i < left->size(); i++) {
-        cout << *(*left)[i].value << " -> ";
+    Node<T>* curr = head;
+    for (int i = 0; i < mid; ++i) {
+        left.insertToEnd(new Node<T>(new T(*curr->value)));
+        curr = curr->next;
     }
-    cout << endl;
+    for (int i = mid; i < length; ++i) {
+        right.insertToEnd(new Node<T>(new T(*curr->value)));
+        curr = curr->next;
+    }
 
-    return linkedList;
+    LinkedList<T> sortedLeft = left.mergeSort();
+    LinkedList<T> sortedRight = right.mergeSort();
+    return merge(sortedLeft, sortedRight);
 }
 
 template <typename T>
-LinkedList<T>& LinkedList<T>::merge(LinkedList<T>& left, LinkedList<T>& right) {
-    int fullLength = left.size() + right.size();
-    LinkedList<T>* result = new LinkedList<T>();
+LinkedList<T> LinkedList<T>::merge(LinkedList<T>& left, LinkedList<T>& right) {
+    LinkedList<T> result;
 
-    Node<T>* rightPointer = &right[0];
-    Node<T>* leftPointer = &left[0];
-    int resultCounter = 0;
+    Node<T>* leftPtr = left.head;
+    Node<T>* rightPtr = right.head;
 
-    while (resultCounter < fullLength && rightPointer && leftPointer) {
-        if (*rightPointer->value < *leftPointer->value) {
-            if (result->length == 0)
-                result->addFirstnode(leftPointer);
-            else
-                result->insertToEnd(leftPointer);
-
-            leftPointer = leftPointer->next;
+    while (leftPtr && rightPtr) {
+        if (*(leftPtr->value) < *(rightPtr->value)) {
+            result.insertToEnd(new Node<T>(new T(*(leftPtr->value))));
+            leftPtr = leftPtr->next;
         } else {
-            if (result->length == 0)
-                result->addFirstnode(rightPointer);
-            else
-                result->insertToEnd(rightPointer);
-
-            rightPointer = rightPointer->next;
+            result.insertToEnd(new Node<T>(new T(*(rightPtr->value))));
+            rightPtr = rightPtr->next;
         }
-        resultCounter++;
     }
 
-    while (rightPointer) {
-        result->insertToEnd(rightPointer);
-        rightPointer = rightPointer->next;
-        resultCounter++;
+    while (leftPtr) {
+        result.insertToEnd(new Node<T>(new T(*(leftPtr->value))));
+        leftPtr = leftPtr->next;
     }
-    while (leftPointer) {
-        result->insertToEnd(leftPointer);
-        leftPointer = leftPointer->next;
-        resultCounter++;
+    while (rightPtr) {
+        result.insertToEnd(new Node<T>(new T(*(rightPtr->value))));
+        rightPtr = rightPtr->next;
     }
 
-    return *result;
+    return result;
 }
