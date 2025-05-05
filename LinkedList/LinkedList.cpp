@@ -20,6 +20,10 @@ template <typename T> LinkedList<T>::LinkedList() {
 }
 
 template <typename T> void LinkedList<T>::insertToStart(Node<T>* newNode) {
+    if (length == 0 || head == nullptr || tail == nullptr) {
+        addFirstnode(newNode);
+        return;
+    }
     Node<T>* temp = head;
     head = newNode;
     head->next = temp;
@@ -87,8 +91,8 @@ template <typename T> void LinkedList<T>::reverse() {
 }
 
 template <typename T> void LinkedList<T>::bubbleSort() {
+    Node<T>* a = head;
     for (int i = 0; i < length; i++) {
-        Node<T>* a = &(*this)[i];
         Node<T>* b = a;
         for (int j = 0; j < length - (1 + i); j++) {
             b = b->next;
@@ -96,6 +100,7 @@ template <typename T> void LinkedList<T>::bubbleSort() {
                 this->swap(*a, *b);
             }
         }
+        a = a->next;
     }
 }
 
@@ -147,6 +152,9 @@ LinkedList<T> LinkedList<T>::merge(LinkedList<T>& left, LinkedList<T>& right) {
         result.insertToEnd(new Node<T>(new T(*(rightPtr->value))));
         rightPtr = rightPtr->next;
     }
+
+    delete leftPtr;
+    delete rightPtr;
 
     return result;
 }

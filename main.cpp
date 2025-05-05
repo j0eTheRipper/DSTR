@@ -19,13 +19,14 @@ void sanitize(string& s);
 void WordFreqForOneStar(Array<Review>& reviews);
 void WordFreqForOneStar(LinkedList<Review>& reviews);
 string* split(string str, int& wordCount);
+void clean();
 
 bool x(Transaction& t) {
-    if (t.category == "Electronics" && t.payment.find("Credit Card"))
-        return true;
-    return false;
+    return t.category == "Electronics" && t.payment.find("Credit Card");
 }
+bool y(Transaction& t) { return t.category == "Electronics"; }
 int main() {
+    clean();
     cout << "Welcome to Reviews and transactions analysier..." << endl;
     cout << "what data structure would you like the program to use? " << endl;
     cout << "1. array" << endl << "2. linked list" << endl;
@@ -88,6 +89,10 @@ int main() {
              << transactions.find(x) << endl;
         stop = chrono::high_resolution_clock::now();
         duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+        double a = transactions.find(x);
+        double b = transactions.find(y);
+        double percentage = a / b * 100;
+        cout << endl << percentage << endl;
         cout << "Executed linear search on " << transactions.len()
              << " transactions in " << duration.count() << " microseconds"
              << endl;
@@ -204,10 +209,65 @@ int main() {
         WordFreqForOneStar(reviews);
     }
 }
+bool missingInfo(string row, int expected) {
+    if (row.find("NaN") != -1 || row.find("Invalid Date") != -1)
+        return true;
+
+    int i = 0;
+    while (row.find(",") != -1) {
+        if (row.substr(0, row.find(",")).length()) {
+            i++;
+        }
+        row.replace(0, row.find(",") + 1, "");
+    }
+    return expected != i;
+}
+bool missingInfoReview(string row, int expected) {
+    if (row.find("\"")) {
+        row.replace(row.find("\"") + 1, row.length(), "");
+    }
+    if (row.find("Invalid Rating") != -1) {
+        return true;
+    }
+    int i = 0;
+    while (row.find(",") != -1) {
+        if (row.substr(0, row.find(",")).length()) {
+            i++;
+        }
+        row.replace(0, row.find(",") + 1, "");
+    }
+    return expected != i;
+}
+
+void clean() {
+    ifstream transactions("transactions.csv");
+    ifstream reviews("reviews.csv");
+    ofstream transactionsCleaned("transactionsCleaned.csv");
+    ofstream reviewsCleaned("reviewsCleaned.csv");
+    string transactionRow;
+    string reviewRow;
+
+    while (getline(transactions, transactionRow, '\n')) {
+        if (missingInfo(transactionRow, 5)) {
+            continue;
+        }
+        transactionsCleaned << transactionRow << endl;
+    }
+    transactions.close();
+    transactionsCleaned.close();
+
+    while (getline(reviews, reviewRow, '\n')) {
+        if (missingInfoReview(reviewRow, 3))
+            continue;
+        reviewsCleaned << reviewRow << endl;
+    }
+    reviews.close();
+    reviewsCleaned.close();
+}
 
 LinkedList<Transaction> LoadTransactionsLinkedList() {
     string transactionRow;
-    ifstream transactionsFile("transactions.csv");
+    ifstream transactionsFile("transactionsCleaned.csv");
 
     // read the first line of the file: the csv header
     getline(transactionsFile, transactionRow, '\n');
@@ -221,6 +281,9 @@ LinkedList<Transaction> LoadTransactionsLinkedList() {
     LinkedList transactions(headNode);
 
     while (getline(transactionsFile, transactionRow, '\n')) {
+        if (missingInfo(transactionRow, 5)) {
+            continue;
+        }
         Transaction* transaction = new Transaction(transactionRow);
         Node<Transaction>* node = new Node(transaction);
         transactions.insertToEnd(node);
@@ -231,7 +294,7 @@ LinkedList<Transaction> LoadTransactionsLinkedList() {
 }
 LinkedList<Review> LoadReviewsLinkedList() {
     string reviewRow;
-    ifstream reviewsFile("reviews.csv");
+    ifstream reviewsFile("reviewsCleaned.csv");
 
     // read the first line of the file: the csv header
     getline(reviewsFile, reviewRow, '\n');
@@ -245,6 +308,9 @@ LinkedList<Review> LoadReviewsLinkedList() {
     LinkedList<Review> reviews(headNode);
 
     while (getline(reviewsFile, reviewRow, '\n')) {
+        if (missingInfoReview(reviewRow, 3)) {
+            continue;
+        }
         Review* review = new Review(reviewRow);
         Node<Review>* node = new Node(review);
         reviews.insertToEnd(node);
@@ -256,7 +322,7 @@ LinkedList<Review> LoadReviewsLinkedList() {
 
 Array<Transaction> LoadTransactionsArray() {
     string transactionRow;
-    ifstream transactionsFile("transactions.csv");
+    ifstream transactionsFile("transactionsCleaned.csv");
 
     // read the first line of the file: the csv header
     getline(transactionsFile, transactionRow, '\n');
@@ -267,6 +333,9 @@ Array<Transaction> LoadTransactionsArray() {
     Array<Transaction> transactions(*transaction);
 
     while (getline(transactionsFile, transactionRow, '\n')) {
+        if (missingInfo(transactionRow, 5)) {
+            continue;
+        }
         Transaction* transaction = new Transaction(transactionRow);
         transactions.append(*transaction);
     }
@@ -275,7 +344,7 @@ Array<Transaction> LoadTransactionsArray() {
 }
 Array<Review> LoadReviewsArray() {
     string reviewRow;
-    ifstream reviewsFile("reviews.csv");
+    ifstream reviewsFile("reviewsCleaned.csv");
 
     // read the first line of the file: the csv header
     getline(reviewsFile, reviewRow, '\n');
@@ -286,6 +355,9 @@ Array<Review> LoadReviewsArray() {
     Array<Review> reviews(*review);
 
     while (getline(reviewsFile, reviewRow, '\n')) {
+        if (missingInfoReview(reviewRow, 3)) {
+            continue;
+        }
         Review* review = new Review(reviewRow);
         reviews.append(*review);
     }

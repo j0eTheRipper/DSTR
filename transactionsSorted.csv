@@ -36,6 +36,7 @@ CUST3988,Smartwatch,Fashion,13,27/12/2023,Cash on Delivery
 CUST8727,Mouse,Electronics,1641,26/12/2023,Bank Transfer
 CUST9033,Gaming Console,Sports,550,26/12/2023,Cash on Delivery
 CUST4769,Headphones,Furniture,598,26/12/2023,Debit Card
+CUST5458,Smartwatch,Beauty,933,26/12/2023,
 CUST1059,Monitor,Electronics,1480,26/12/2023,Cash on Delivery
 CUST4075,Smartphone,Automotive,744,26/12/2023,Debit Card
 CUST3550,Smartwatch,Beauty,1738,26/12/2023,Credit Card
@@ -49,6 +50,7 @@ CUST8760,Camera,Groceries,852,23/12/2023,PayPal
 CUST1690,Smartphone,Fashion,1677,23/12/2023,Bank Transfer
 CUST6518,Tablet,Fashion,1991,23/12/2023,Bank Transfer
 CUST8157,Headphones,Groceries,280,23/12/2023,Cash on Delivery
+CUST5763,Keyboard,Books,1305,22/12/2023,
 CUST4351,Headphones,Beauty,1169,22/12/2023,Credit Card
 CUST7102,Mouse,Books,243,22/12/2023,Debit Card
 CUST5419,Headphones,Fashion,1803,22/12/2023,Debit Card
@@ -244,6 +246,7 @@ CUST1906,Laptop,Toys,1905,16/11/2023,PayPal
 CUST4455,Mouse,Electronics,1284,16/11/2023,Cash on Delivery
 CUST2023,Tablet,Fashion,238,16/11/2023,Debit Card
 CUST4355,Camera,Home Appliances,904,16/11/2023,Cash on Delivery
+CUST9423,Gaming Console,Automotive,1002,15/11/2023,
 CUST4148,Smartwatch,Fashion,1145,15/11/2023,Credit Card
 CUST7812,Headphones,Sports,1566,15/11/2023,Credit Card
 CUST4843,Headphones,Toys,1243,14/11/2023,Debit Card
@@ -395,6 +398,7 @@ CUST3148,Headphones,Groceries,1468,20/10/2023,Bank Transfer
 CUST3669,Smartwatch,Toys,1154,20/10/2023,Credit Card
 CUST1483,Laptop,Automotive,1792,19/10/2023,PayPal
 CUST5111,Gaming Console,Beauty,1701,19/10/2023,Bank Transfer
+CUST8017,Keyboard,Groceries,934,19/10/2023,
 CUST6789,Camera,Fashion,1978,19/10/2023,Cash on Delivery
 CUST2426,Monitor,Furniture,435,18/10/2023,PayPal
 CUST1894,Monitor,Beauty,1163,18/10/2023,Cash on Delivery
@@ -601,6 +605,7 @@ CUST5833,Tablet,Beauty,12,13/9/2023,Cash on Delivery
 CUST3381,Camera,Fashion,497,13/9/2023,PayPal
 CUST5951,Smartphone,Automotive,398,12/9/2023,Debit Card
 CUST7518,Gaming Console,Furniture,341,12/9/2023,Cash on Delivery
+CUST7253,Monitor,Groceries,495,12/9/2023,
 CUST5214,Mouse,Furniture,1515,12/9/2023,Cash on Delivery
 CUST8252,Monitor,Furniture,1596,12/9/2023,Bank Transfer
 CUST9468,Tablet,Sports,1781,11/9/2023,Bank Transfer
@@ -850,6 +855,7 @@ CUST3709,Monitor,Books,1395,2/8/2023,Bank Transfer
 CUST5025,Headphones,Toys,1135,1/8/2023,Bank Transfer
 CUST2545,Monitor,Home Appliances,1433,1/8/2023,Bank Transfer
 CUST2093,Keyboard,Beauty,206,1/8/2023,Cash on Delivery
+CUST3345,Laptop,Beauty,1766,1/8/2023,
 CUST6680,Tablet,Home Appliances,1710,1/8/2023,Bank Transfer
 CUST9419,Tablet,Sports,1381,1/8/2023,PayPal
 CUST9962,Smartwatch,Toys,338,1/8/2023,Bank Transfer
@@ -1057,6 +1063,7 @@ CUST3541,Monitor,Toys,1430,29/6/2023,Bank Transfer
 CUST1929,Headphones,Furniture,474,29/6/2023,Credit Card
 CUST5634,Headphones,Groceries,103,29/6/2023,Credit Card
 CUST1468,Headphones,Furniture,124,29/6/2023,Bank Transfer
+CUST5181,Tablet,Fashion,1143,29/6/2023,
 CUST2166,Headphones,Furniture,1711,29/6/2023,Bank Transfer
 CUST2529,Smartphone,Sports,485,28/6/2023,Credit Card
 CUST4842,Keyboard,Furniture,591,28/6/2023,Debit Card
@@ -1252,9 +1259,12 @@ CUST6621,Tablet,Automotive,1026,21/5/2023,Debit Card
 CUST5986,Tablet,Groceries,979,21/5/2023,Debit Card
 CUST9159,Gaming Console,Fashion,1944,21/5/2023,Debit Card
 CUST9661,Mouse,Furniture,537,21/5/2023,Bank Transfer
+CUST9905,Laptop,Toys,1366,21/5/2023,
 CUST5064,Camera,Beauty,1424,21/5/2023,Debit Card
 CUST3820,Monitor,Sports,115,20/5/2023,Cash on Delivery
 CUST9524,Gaming Console,Sports,302,20/5/2023,Credit Card
+CUST5892,Camera,Automotive,235,20/5/2023,
+CUST4013,Camera,Electronics,175,20/5/2023,
 CUST6408,Monitor,Electronics,863,20/5/2023,Debit Card
 CUST2084,Monitor,Fashion,328,20/5/2023,PayPal
 CUST7143,Smartphone,Sports,1690,20/5/2023,PayPal
@@ -1321,6 +1331,7 @@ CUST8341,Smartwatch,Fashion,1836,9/5/2023,Debit Card
 CUST6943,Keyboard,Automotive,195,9/5/2023,Debit Card
 CUST7088,Camera,Electronics,539,9/5/2023,Bank Transfer
 CUST8709,Camera,Toys,752,9/5/2023,PayPal
+CUST4434,Mouse,Automotive,483,9/5/2023,Bank Transfer
 CUST8008,Smartwatch,Home Appliances,579,8/5/2023,Credit Card
 CUST7580,Keyboard,Electronics,122,8/5/2023,Cash on Delivery
 CUST4501,Keyboard,Groceries,1923,8/5/2023,Cash on Delivery
@@ -1424,6 +1435,7 @@ CUST2033,Laptop,Books,1543,22/4/2023,Debit Card
 CUST3160,Smartphone,Beauty,648,22/4/2023,Credit Card
 CUST8421,Monitor,Groceries,1982,22/4/2023,Bank Transfer
 CUST6529,Camera,Books,1497,22/4/2023,Cash on Delivery
+CUST2099,Smartwatch,Beauty,876,21/4/2023,
 CUST7789,Mouse,Electronics,790,21/4/2023,Debit Card
 CUST2382,Laptop,Automotive,1532,21/4/2023,PayPal
 CUST1234,Gaming Console,Groceries,548,21/4/2023,Cash on Delivery
@@ -1444,6 +1456,7 @@ CUST9002,Camera,Beauty,1750,19/4/2023,Debit Card
 CUST9504,Laptop,Automotive,653,19/4/2023,Credit Card
 CUST2102,Smartwatch,Toys,269,18/4/2023,Credit Card
 CUST5963,Camera,Automotive,213,18/4/2023,Debit Card
+CUST9744,Camera,Electronics,1351,17/4/2023,
 CUST1162,Smartwatch,Automotive,1430,17/4/2023,Debit Card
 CUST6427,Camera,Home Appliances,1291,17/4/2023,PayPal
 CUST6631,Smartphone,Home Appliances,962,17/4/2023,Bank Transfer
@@ -1537,6 +1550,7 @@ CUST1667,Headphones,Home Appliances,323,3/4/2023,Credit Card
 CUST9488,Smartphone,Sports,169,3/4/2023,Cash on Delivery
 CUST7655,Tablet,Home Appliances,1469,3/4/2023,Credit Card
 CUST5815,Gaming Console,Furniture,1888,3/4/2023,Cash on Delivery
+CUST5188,Laptop,Beauty,1675,3/4/2023,
 CUST5165,Camera,Groceries,1779,3/4/2023,Bank Transfer
 CUST2989,Gaming Console,Furniture,1451,2/4/2023,Bank Transfer
 CUST1111,Headphones,Toys,1885,2/4/2023,Debit Card
@@ -1604,6 +1618,7 @@ CUST1597,Camera,Automotive,615,24/3/2023,Bank Transfer
 CUST3838,Smartwatch,Automotive,1283,24/3/2023,PayPal
 CUST7061,Smartwatch,Sports,1175,24/3/2023,Debit Card
 CUST6850,Headphones,Sports,1849,23/3/2023,PayPal
+CUST2692,Smartphone,Fashion,1561,23/3/2023,
 CUST6572,Mouse,Electronics,1892,23/3/2023,Bank Transfer
 CUST4506,Tablet,Toys,1116,23/3/2023,Cash on Delivery
 CUST5769,Keyboard,Groceries,434,23/3/2023,Credit Card
@@ -1832,6 +1847,7 @@ CUST8229,Smartwatch,Beauty,1776,13/2/2023,PayPal
 CUST6235,Headphones,Toys,496,12/2/2023,Bank Transfer
 CUST9362,Laptop,Books,1657,12/2/2023,Credit Card
 CUST6018,Monitor,Automotive,1332,12/2/2023,PayPal
+CUST9684,Laptop,Electronics,729,12/2/2023,
 CUST7189,Smartwatch,Toys,640,12/2/2023,Cash on Delivery
 CUST3399,Smartwatch,Toys,1060,12/2/2023,PayPal
 CUST3299,Smartphone,Electronics,1897,12/2/2023,Debit Card
@@ -2043,6 +2059,7 @@ CUST4992,Laptop,Fashion,1576,6/1/2023,Debit Card
 CUST9645,Monitor,Fashion,1104,6/1/2023,PayPal
 CUST1046,Mouse,Toys,1526,6/1/2023,Cash on Delivery
 CUST5034,Gaming Console,Toys,1197,6/1/2023,Credit Card
+CUST6443,Monitor,Furniture,1501,6/1/2023,
 CUST6565,Camera,Home Appliances,677,5/1/2023,Debit Card
 CUST7478,Laptop,Fashion,1014,5/1/2023,Debit Card
 CUST8744,Keyboard,Groceries,1746,5/1/2023,Debit Card
@@ -2115,6 +2132,7 @@ CUST6474,Gaming Console,Toys,1329,23/12/2022,Debit Card
 CUST4200,Mouse,Beauty,219,23/12/2022,PayPal
 CUST9129,Gaming Console,Home Appliances,1810,23/12/2022,PayPal
 CUST9472,Monitor,Furniture,134,23/12/2022,PayPal
+CUST6484,Tablet,Books,425,23/12/2022,
 CUST6434,Camera,Fashion,1696,23/12/2022,Cash on Delivery
 CUST3452,Keyboard,Sports,1297,23/12/2022,Bank Transfer
 CUST1913,Laptop,Groceries,1842,22/12/2022,Cash on Delivery
@@ -2249,6 +2267,7 @@ CUST4068,Smartphone,Sports,461,25/11/2022,Debit Card
 CUST9573,Tablet,Electronics,626,25/11/2022,Credit Card
 CUST3917,Smartwatch,Fashion,1042,25/11/2022,Bank Transfer
 CUST8595,Monitor,Furniture,1858,25/11/2022,Bank Transfer
+CUST5974,Monitor,Automotive,505,25/11/2022,
 CUST5464,Tablet,Electronics,967,25/11/2022,Credit Card
 CUST4894,Monitor,Sports,1865,25/11/2022,Cash on Delivery
 CUST4564,Smartphone,Books,1018,24/11/2022,Bank Transfer
@@ -2343,6 +2362,7 @@ CUST1058,Mouse,Groceries,1671,11/11/2022,PayPal
 CUST9074,Camera,Fashion,1601,11/11/2022,Cash on Delivery
 CUST3312,Tablet,Fashion,843,11/11/2022,Debit Card
 CUST2416,Keyboard,Beauty,1989,11/11/2022,Bank Transfer
+CUST5427,Smartwatch,Fashion,315,11/11/2022,
 CUST3471,Camera,Furniture,1642,10/11/2022,Bank Transfer
 CUST1566,Keyboard,Beauty,164,10/11/2022,Cash on Delivery
 CUST3069,Laptop,Automotive,1591,10/11/2022,PayPal
@@ -2379,6 +2399,7 @@ CUST5192,Gaming Console,Groceries,1433,6/11/2022,PayPal
 CUST7478,Smartphone,Furniture,1092,6/11/2022,PayPal
 CUST3404,Keyboard,Automotive,1733,6/11/2022,Cash on Delivery
 CUST5783,Gaming Console,Groceries,711,6/11/2022,Debit Card
+CUST3600,Headphones,Groceries,1533,6/11/2022,
 CUST9570,Gaming Console,Electronics,950,6/11/2022,Cash on Delivery
 CUST6733,Camera,Sports,719,5/11/2022,Credit Card
 CUST6090,Headphones,Groceries,1096,5/11/2022,Debit Card
@@ -2388,6 +2409,7 @@ CUST1670,Mouse,Toys,954,5/11/2022,Bank Transfer
 CUST5078,Smartwatch,Books,1384,5/11/2022,Cash on Delivery
 CUST8389,Gaming Console,Books,1484,5/11/2022,Cash on Delivery
 CUST3828,Mouse,Home Appliances,999,5/11/2022,Bank Transfer
+CUST1480,Smartphone,Books,1744,4/11/2022,
 CUST8177,Smartwatch,Furniture,253,4/11/2022,Bank Transfer
 CUST4322,Laptop,Home Appliances,1317,4/11/2022,Cash on Delivery
 CUST1648,Camera,Automotive,1369,4/11/2022,Credit Card
@@ -2612,6 +2634,7 @@ CUST8336,Laptop,Fashion,482,23/9/2022,Debit Card
 CUST9901,Tablet,Fashion,1468,22/9/2022,Debit Card
 CUST5037,Gaming Console,Fashion,1714,22/9/2022,Bank Transfer
 CUST1808,Monitor,Furniture,1491,22/9/2022,PayPal
+CUST4970,Keyboard,Toys,1423,21/9/2022,
 CUST2615,Headphones,Fashion,858,21/9/2022,Debit Card
 CUST4068,Tablet,Books,1361,21/9/2022,Cash on Delivery
 CUST5898,Smartphone,Beauty,1740,21/9/2022,Cash on Delivery
@@ -2760,6 +2783,7 @@ CUST1377,Smartwatch,Beauty,906,27/8/2022,PayPal
 CUST8612,Gaming Console,Groceries,194,26/8/2022,PayPal
 CUST1268,Laptop,Groceries,1791,26/8/2022,PayPal
 CUST7393,Laptop,Electronics,308,26/8/2022,Debit Card
+CUST2046,Monitor,Furniture,674,26/8/2022,
 CUST7879,Mouse,Beauty,1014,26/8/2022,Bank Transfer
 CUST2365,Monitor,Beauty,887,26/8/2022,Cash on Delivery
 CUST9376,Smartphone,Electronics,1657,26/8/2022,Debit Card
@@ -2825,6 +2849,7 @@ CUST8394,Mouse,Books,770,18/8/2022,Credit Card
 CUST8185,Mouse,Fashion,303,17/8/2022,Bank Transfer
 CUST1532,Headphones,Beauty,1584,17/8/2022,Cash on Delivery
 CUST8701,Smartphone,Beauty,152,17/8/2022,Credit Card
+CUST4842,Mouse,Groceries,797,17/8/2022,
 CUST8983,Mouse,Furniture,805,17/8/2022,Debit Card
 CUST5243,Laptop,Fashion,836,16/8/2022,PayPal
 CUST3270,Monitor,Fashion,1821,16/8/2022,Bank Transfer
@@ -2928,6 +2953,7 @@ CUST8419,Gaming Console,Electronics,714,30/7/2022,Credit Card
 CUST6790,Smartphone,Automotive,631,29/7/2022,Bank Transfer
 CUST4385,Keyboard,Sports,1080,29/7/2022,Bank Transfer
 CUST9228,Smartwatch,Toys,272,29/7/2022,PayPal
+CUST7916,Laptop,Beauty,1035,28/7/2022,
 CUST8446,Camera,Fashion,366,28/7/2022,PayPal
 CUST6624,Tablet,Books,1883,28/7/2022,Cash on Delivery
 CUST9199,Headphones,Sports,1743,28/7/2022,Cash on Delivery
@@ -2986,6 +3012,7 @@ CUST5130,Headphones,Toys,775,19/7/2022,Cash on Delivery
 CUST9256,Smartwatch,Beauty,1589,19/7/2022,Bank Transfer
 CUST4228,Smartwatch,Groceries,1621,18/7/2022,Debit Card
 CUST8413,Monitor,Groceries,1045,18/7/2022,Credit Card
+CUST5126,Laptop,Fashion,481,18/7/2022,
 CUST7273,Monitor,Home Appliances,1690,18/7/2022,Cash on Delivery
 CUST9710,Laptop,Furniture,420,18/7/2022,Cash on Delivery
 CUST5466,Keyboard,Electronics,912,18/7/2022,Bank Transfer
@@ -3018,6 +3045,7 @@ CUST1162,Camera,Automotive,866,11/7/2022,Credit Card
 CUST8543,Gaming Console,Books,828,11/7/2022,Credit Card
 CUST2373,Gaming Console,Toys,1610,11/7/2022,Cash on Delivery
 CUST6847,Keyboard,Books,998,11/7/2022,Debit Card
+CUST7327,Gaming Console,Toys,867,11/7/2022,
 CUST9496,Mouse,Automotive,104,11/7/2022,Bank Transfer
 CUST9268,Headphones,Groceries,214,11/7/2022,PayPal
 CUST5208,Monitor,Furniture,1930,11/7/2022,Debit Card
@@ -3169,6 +3197,7 @@ CUST9958,Headphones,Beauty,914,16/6/2022,Cash on Delivery
 CUST9883,Monitor,Automotive,1340,16/6/2022,Credit Card
 CUST7382,Tablet,Books,164,16/6/2022,Bank Transfer
 CUST2419,Smartwatch,Furniture,1669,16/6/2022,Debit Card
+CUST4320,Monitor,Automotive,1905,16/6/2022,
 CUST4611,Tablet,Furniture,1927,16/6/2022,Debit Card
 CUST3009,Camera,Toys,626,16/6/2022,Cash on Delivery
 CUST8612,Gaming Console,Sports,858,15/6/2022,Credit Card
@@ -3196,6 +3225,7 @@ CUST5063,Headphones,Beauty,908,13/6/2022,Debit Card
 CUST4396,Keyboard,Fashion,255,13/6/2022,Credit Card
 CUST9747,Tablet,Home Appliances,490,12/6/2022,Credit Card
 CUST1831,Mouse,Furniture,1594,12/6/2022,Debit Card
+CUST5788,Mouse,Electronics,227,12/6/2022,
 CUST2499,Keyboard,Beauty,1189,11/6/2022,Cash on Delivery
 CUST3596,Tablet,Home Appliances,1672,11/6/2022,Debit Card
 CUST1468,Mouse,Beauty,1725,11/6/2022,Debit Card
@@ -3359,6 +3389,7 @@ CUST5752,Headphones,Toys,1922,15/5/2022,Bank Transfer
 CUST8862,Camera,Beauty,1897,14/5/2022,Cash on Delivery
 CUST3788,Smartwatch,Beauty,288,14/5/2022,Bank Transfer
 CUST2982,Monitor,Furniture,1075,13/5/2022,PayPal
+CUST1366,Monitor,Electronics,179,13/5/2022,
 CUST1776,Smartphone,Electronics,1179,13/5/2022,Debit Card
 CUST4439,Monitor,Furniture,1942,13/5/2022,Credit Card
 CUST3251,Monitor,Books,1232,13/5/2022,Debit Card
@@ -3375,6 +3406,7 @@ CUST7987,Gaming Console,Sports,1043,11/5/2022,Credit Card
 CUST7260,Mouse,Automotive,462,11/5/2022,Debit Card
 CUST4924,Camera,Sports,1184,10/5/2022,Credit Card
 CUST7601,Gaming Console,Automotive,428,10/5/2022,PayPal
+CUST6902,Laptop,Home Appliances,296,10/5/2022,
 CUST6590,Smartphone,Fashion,1278,10/5/2022,Credit Card
 CUST6385,Headphones,Groceries,763,10/5/2022,PayPal
 CUST2871,Smartwatch,Automotive,529,9/5/2022,Cash on Delivery
@@ -3417,6 +3449,7 @@ CUST5245,Laptop,Beauty,902,1/5/2022,Credit Card
 CUST8860,Mouse,Home Appliances,1471,1/5/2022,Bank Transfer
 CUST1531,Keyboard,Books,891,1/5/2022,Credit Card
 CUST6046,Headphones,Books,681,1/5/2022,PayPal
+CUST7156,Smartphone,Home Appliances,397,30/4/2022,
 CUST2911,Monitor,Beauty,859,30/4/2022,Credit Card
 CUST4642,Monitor,Home Appliances,1170,30/4/2022,Credit Card
 CUST3363,Smartphone,Automotive,904,30/4/2022,Cash on Delivery
@@ -3481,6 +3514,7 @@ CUST2954,Smartphone,Books,78,19/4/2022,PayPal
 CUST4079,Smartwatch,Beauty,1247,19/4/2022,Bank Transfer
 CUST6681,Smartwatch,Home Appliances,1826,19/4/2022,Bank Transfer
 CUST2393,Smartwatch,Electronics,729,19/4/2022,Bank Transfer
+CUST7646,Laptop,Home Appliances,224,19/4/2022,
 CUST6083,Headphones,Electronics,1551,19/4/2022,Bank Transfer
 CUST2176,Monitor,Home Appliances,1188,19/4/2022,Bank Transfer
 CUST7665,Monitor,Beauty,1022,18/4/2022,Bank Transfer
@@ -4036,7 +4070,6 @@ CUST6098,Smartphone,Automotive,658,19/1/2022,PayPal
 CUST4072,Keyboard,Electronics,967,19/1/2022,PayPal
 CUST7397,Monitor,Groceries,1866,19/1/2022,Bank Transfer
 CUST3390,Laptop,Books,1458,19/1/2022,PayPal
-CUST4434,Mouse,Automotive,483,19/1/2022,Bank Transfer
 CUST4312,Gaming Console,Fashion,1147,18/1/2022,Debit Card
 CUST5126,Tablet,Home Appliances,1514,18/1/2022,Credit Card
 CUST8246,Gaming Console,Furniture,798,18/1/2022,Cash on Delivery
