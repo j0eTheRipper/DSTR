@@ -1,8 +1,6 @@
 #include "LinkedList.h"
 #include "Node/Node.h"
 
-template class LinkedList<int>;
-
 using namespace std;
 
 template <typename T> LinkedList<T>::LinkedList(Node<T>* node) {

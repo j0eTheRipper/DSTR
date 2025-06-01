@@ -8,12 +8,16 @@ Player::Player(std::string username, std::string name, std::string password,
     this->date = date;
 }
 
+Player::Player() {}
+
 DateRegistered::DateRegistered(const int& day, const int& month,
                                const int& year) {
     this->day = day;
     this->month = month;
     this->year = year;
 }
+
+DateRegistered::DateRegistered() {}
 
 bool Player::operator<(const Player& player) {
     // true if this (ie left operand) has happened before player (ie right

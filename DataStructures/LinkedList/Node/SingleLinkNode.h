@@ -6,7 +6,7 @@ template <typename T> struct Node {
     Node* next;
 
     Node<T>(T& value);
-    Node<T>();
+    ~Node<T>();
 };
 
 #endif // !__SINGLELINKNODE_H_INCLUDED__
