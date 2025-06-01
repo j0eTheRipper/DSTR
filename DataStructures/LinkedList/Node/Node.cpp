@@ -1,8 +1,6 @@
 #include "Node.h"
-#include "wordFreq.h"
-template struct Node<Transaction>;
-template struct Node<Review>;
-template struct Node<WordFreq>;
+
+template class Node<int>;
 
 template <class T> Node<T>::Node(T* value) {
     this->value = value;

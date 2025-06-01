@@ -1,8 +1,4 @@
 #include "Array.h"
-#include "Node/wordFreq.h"
-template class Array<Transaction>;
-template class Array<Review>;
-template class Array<WordFreq>;
 
 template <typename T> Array<T>::Array(T& item) {
     array = new T[1];
@@ -63,7 +59,7 @@ template <typename T> Array<T> Array<T>::mergeSort() {
         return *this;
     }
 
-    int mid = length / 2;
+    const int mid = length / 2;
     Array<T> left, right;
 
     for (int i = 0; i < mid; i++) {
