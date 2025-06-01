@@ -1,6 +1,7 @@
 #include "Node.h"
+#include "../PriorityQueue/Player.h"
 
-template class Node<int>;
+template class Node<Player>;
 
 template <class T> Node<T>::Node(T* value) {
     this->value = value;
